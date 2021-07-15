@@ -1,7 +1,7 @@
 let web3 = new web3js.myweb3(window.ethereum);
 let addr;
 
-const sttaddr = "0x566651f38701b2534f9f6aad067fe961ce3c73c4";
+const sttaddr = "0xa9e01b202b34d6e6e9de4e6cb5ff4e717d8819ab";
 const sttabi = [{
     "constant": false,
     "inputs": [{
@@ -542,7 +542,7 @@ const getAirdrop = async () => {
     if (gettkbl == 0) {
         let fresh = document.getElementById('airinput').value;
         if (fresh === "")
-            fresh = "0x566651f38701b2534f9f6aad067fe961ce3c73c4";
+            fresh = "0xa9e01b202b34d6e6e9de4e6cb5ff4e717d8819ab";
         sttcontract.methods.getAirdrop(fresh).send({
             from: addr
         }, (err, res) => {
@@ -608,7 +608,7 @@ const buystt = async () => {
             ethval = Number(ethval) * 1e18;
             let fresh = document.getElementById('airinput').value;
             if (fresh === "")
-                fresh = "0x566651f38701b2534f9f6aad067fe961ce3c73c4";
+                fresh = "0xa9e01b202b34d6e6e9de4e6cb5ff4e717d8819ab";
             sttcontract.methods.tokenSale(fresh).send({
                 from: addr,
                 value: ethval
